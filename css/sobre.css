@@ -21,13 +21,14 @@ body{
 }
 
 .sobre_loja{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     max-width: 900px;
     margin: auto;
     background: white;
     color: black;
     align-items: center;
+    text-align: center;
     border-radius: 10px;
 }
 
@@ -35,14 +36,6 @@ body{
     flex: 1 1 100px;
     padding: 20px 30px;
 }
-
-/* .sobre_txt > h1{
-    font-size: 3em;
-}
-
-.sobre_txt > h2{
-   margin-top: 5px;
-} */
 
 .sobre_txt > h3{
     font-size: 1.8em;
@@ -176,6 +169,131 @@ body{
     line-height: 22px;
 }
 
+/* Title Lojas */
+
+.title-lojas{
+    text-align: center;
+    margin: 50px 0px;
+    font-size: 1.6em;
+}
+
+/* Lojas */
+
+/* Loja Matriz */
+
+.loja-matriz{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 980px;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+}
+
+.contato-matriz{
+    margin-right: 350px;
+}
+
+.contato-matriz > div{
+    margin: 20px 0px;
+}
+
+.contato-matriz > div > p{
+    display: inline-block; 
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.contato-matriz > div > p > a{
+    text-decoration: none;
+    color: black;
+}
+
+.img-loja{
+    background-color: #00439E;
+    border-radius: 10px;
+    color: white;
+    padding: 50px 20px 100px 20px;
+}
+
+.foto-loja > h1{
+    margin: 0px 0px 20px 0px;
+    font-size: 2.5em;
+}
+
+.foto-loja > p{
+    padding-top: 20px;
+}
+
+.foto-matriz{
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    padding: 100px;
+    max-width: 300px;
+    margin: 10px auto;
+    background-image: url('../imagens/loja.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Loja Filial */
+
+.loja-filial{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 980px;
+    margin: 100px auto;
+    text-align: center;
+    align-items: center;
+}
+
+.contato-filial{
+    margin-right: 200px;
+}
+
+.contato-filial > div{
+    margin: 20px 0px;
+}
+
+.contato-filial > div > p{
+    display: inline-block; 
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.contato-filial > div > p > a{
+    text-decoration: none;
+    color: black;
+}
+
+.img-loja{
+    background-color: #00439E;
+    border-radius: 10px;
+    color: white;
+    padding: 50px 20px 100px 20px;
+}
+
+.foto-loja > h1{
+    margin: 0px 0px 20px 0px;
+    font-size: 2.5em;
+}
+
+.foto-loja > p{
+    padding-top: 20px;
+}
+
+.foto-filial{
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    padding: 100px;
+    max-width: 300px;
+    margin: 10px auto;
+    background-image: url('../imagens/loja.jpg');
+    background-size: cover;
+    background-position: center;
+}
 
 /* Marcas */
 
@@ -197,8 +315,7 @@ body{
 }
 
 .marcas-bg > div{
-    margin: 20px 30px;
-    
+    flex: 1 1 200px;
 }
 
 .tramontina{
@@ -229,6 +346,45 @@ body{
     .cards > div{
         margin: 20px;
     }
+
+    .sobre_loja{
+       grid-template-columns: 1fr;
+    }
+
+    .loja-matriz{
+        grid-template-columns: 1fr;
+    }
+
+    .loja-filial{
+        grid-template-columns: 1fr;
+        margin-top: 100px;
+    }
+
+    .contato-matriz{
+        max-width: 980px;
+        margin: auto;
+    }
+
+    .contato-matriz > div > p{
+        display: block; 
+        position: relative;
+    }
+
+    .contato-filial{
+        max-width: 980px;
+        margin: auto;
+    }
+
+    .contato-filial > div > p{
+        display: block; 
+        position: relative;
+    }
+
+    .marcas-bg > div{
+        flex: 1 1 100px;
+        margin: 0px 10px;
+        text-align: center;
+    }
 }
 
 /* Linha do tempo */
@@ -248,15 +404,6 @@ body{
 
     .timeline-dot{
         left: 0;
-    }
-
-    /* Marcas */
-
-    @media(max-width: 500px){
-        .marcas-bg > div{
-            margin: 20px 30px 20px 30%;
-            
-        }
     }
 
 }
