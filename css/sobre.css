@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
 
 img{
@@ -10,6 +11,8 @@ img{
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+/* Sobre o rei */
 
 .sobre_loja_bg{
     background: #00439E;
@@ -33,12 +36,6 @@ body{
     padding: 20px 30px;
 }
 
-/* .sobre_loja_img{
-    background-image: url('../imagens/logo.jpg');
-    background-position: center;
-    background-size: cover;
-} */
-
 .sobre_txt > h1{
     font-size: 3em;
 }
@@ -47,7 +44,6 @@ body{
    margin-top: 5px;
 }
 
-
 .sobre_txt > p{
     margin-top: 20px;
     line-height: 1.4;
@@ -55,6 +51,210 @@ body{
 
 .title-livre{
     text-align: center;
+    margin: 100px 0px;
+    font-size: 1.6em;
+}
+
+/* CARDS DE MISSÃO E VALORES */
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 980px;
+    margin: -60px auto auto auto;
+    z-index: 1;
+}
+
+.cards > div{
+    flex: 1 1 100px;
+    padding: 10px 5px;
+    margin: 0px 5px;
+    border-radius: 10px;
+    background: white;
+    text-align: center;
+}
+
+.cards > div > h2{
+    margin: 10px 0px;
+}
+
+.logo-rei{
+    margin-top: 7px;
+}
+
+/* Lojas */
+
+
+
+
+/* Título História */
+
+.historia{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.6em;
+}
+
+/* Linha do tempo */
+
+.timeline-section{
+    /* background: #00439E; */
+    min-height: 100vh;
+    padding: 100px 15px;
+}
+
+.timeline-items{
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.timeline-items::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #00439E;
+    left: calc(50% - 1px);
+}
+
+.timeline-item{
+    /* background-color: #2f363e; */
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.timeline-item:last-child{
+    margin-bottom: 0;
+}
+
+.timeline-item:nth-child(odd){
+   padding-right: calc(50% + 30px);
+}
+
+.timeline-item:nth-child(even){
+   padding-left: calc(50% + 30px);
+}
+
+.timeline-dot{
+    height: 16px;
+    width: 16px;
+    background-color: #00439E;
+    position: absolute;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top: 10px;
+}
+
+.timeline-date{
+    font-size: 30px;
+    color: #00439E;
+    margin: 6px 15px;
+}
+
+.timeline-content{
+    background-color: #00439E;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.timeline-content h3{
+    font-size: 20px;
+    color: white;
+    margin: 0 0 15px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.timeline-content p{
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+}
+
+/* Marcas */
+
+.title-marcas{
+    text-align: center;
     margin: 50px 0px;
     font-size: 1.6em;
+}
+
+.marcas-bg{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.marcas{
+    background-color: #f8f5f5;
+}
+
+.marcas-bg > div{
+    margin: 20px 30px;
+    
+}
+
+.tramontina{
+    opacity: 0.5;
+}
+
+.tramontina:hover{
+    opacity: 1;
+}
+
+.zoom {
+    transition: transform 1s;
+  }
+  
+  .zoom:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+  }
+
+/* Cards */
+
+@media(max-width: 900px){
+    .cards{
+        grid-template-columns: 1fr;
+    }
+    
+    .cards > div{
+        margin: 20px;
+    }
+}
+
+/* Linha do tempo */
+
+@media(max-width: 767px){
+    .timeline-items::before{
+        left: 7px;
+    }
+    .timeline-item:nth-child(odd){
+        padding-right: 0;
+        text-align: left;
+    }
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even){
+        padding-left: 37px;
+    }
+
+    .timeline-dot{
+        left: 0;
+    }
+
+    /* Marcas */
+
+    @media(max-width: 500px){
+        .marcas-bg > div{
+            margin: 20px 30px 20px 30%;
+            
+        }
+    }
+
 }
