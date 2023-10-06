@@ -36,17 +36,23 @@ body{
     padding: 20px 30px;
 }
 
-.sobre_txt > h1{
+/* .sobre_txt > h1{
     font-size: 3em;
 }
 
 .sobre_txt > h2{
    margin-top: 5px;
-}
+} */
 
+.sobre_txt > h3{
+    font-size: 1.8em;
+ }
+ 
 .sobre_txt > p{
     margin-top: 20px;
     line-height: 1.4;
+    font-weight: normal;
+    font-size: 1.2em;
 }
 
 .title-livre{
@@ -81,11 +87,6 @@ body{
 .logo-rei{
     margin-top: 7px;
 }
-
-/* Lojas */
-
-
-
 
 /* Título História */
 
@@ -174,6 +175,7 @@ body{
     font-weight: 300;
     line-height: 22px;
 }
+
 
 /* Marcas */
 
